@@ -10,33 +10,44 @@ body {
     position: absolute;
     z-index: -1;
 }
+.frame-wrapper{
+  margin: 15px auto;
+  padding: 1%;
+  width: 90%;
+  height: 80%;
+  border: 5px solid #5E5685;
+  border-radius: 2em;
+  background-color: rgba(255, 255, 255, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 #frame {
-    margin: 15px auto;
-    padding: 1%;
-    max-width: 90%;
-    border: 5px solid #5E5685;
-    background-color: rgba(255,255,255,.5);
+width: 100%;
+
 }
 
 .content-body {
     margin: auto;
     text-align: center;
+    vertical-align: bottom;
     width: 100%;
+    height: 100%;
     max-width: 800px;
 }
 
-.buttons{
+.buttons {
     display: flex;
     justify-content: center;
 }
 
-i.fa{
-  font-size: 2em;
+i.fa {
+    font-size: 2em;
 }
 
 .button {
-  margin: 0 2px;
+    margin: 0 2px;
     color: #5E5685;
     font-family: 'Clicker Script', cursive;
     font-weight: bold;
@@ -45,11 +56,11 @@ i.fa{
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 75px;
-    height: 75px;
-    border-radius: 45px;
+    width: 5em;
+    height: 5em;
+    border-radius: 2em;
     border: 2px solid #5E5685;
-    background-color: rgba(255,255,255,.5);
+    background-color: rgba(255, 255, 255, .5);
 }
 
 #camera {
