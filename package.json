@@ -1,0 +1,20 @@
+{
+  "name": "uploader",
+  "version": "1.0.0",
+  "description": "User client for taking and sending pictures",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://irongollem@bitbucket.org/irongollem/snapshow.git"
+  },
+  "keywords": [
+    "photo",
+    "upload",
+    "wedding"
+  ],
+  "author": "Jeffrey Ernst",
+  "license": "ISC"
+}
