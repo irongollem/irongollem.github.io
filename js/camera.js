@@ -28,17 +28,3 @@ function sendSuccessMessage() {
         alert(client.statusText);
     }
 }
-
-
-//Parallax gimmick
-var isMobile = navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false;
-var posX, posY;
-
-if (isMobile && window.DeviceOrientationEvent) {
-    window.addEventListener('deviceorientationevent', function(eventData) {
-      posX = eventData.gamma * 2;
-      posY = eventData.beta * 3;
-
-      
-    }, false);
-}
