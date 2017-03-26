@@ -1,5 +1,6 @@
 var camera = document.getElementById('camera');
 var frame = document.getElementById('frame');
+var textSpan = document.getElementById('textSpan');
 var uploadButton = document.getElementById('upload-button');
 var client = new XMLHttpRequest();
 
@@ -21,12 +22,18 @@ function uploadFoto(e) {
 function loadFotoToPreview(e) {
     var file = e.target.files[0];
     frame.src = URL.createObjectURL(file);
+    frame.classList.remove('hidden');
+    uploadButton.classList.remove('disabled');
+    textSpan.classList.add('hidden');
 }
 
 function sendSuccessMessage() {
-    frame.src = '';
     if (client.readyState == 4 && client.status == 200) {
-        alert(client.statusText);
         frame.src = '';
+        frame.classList.add('hidden');
+        uploadButton.classList.add('disabled');
+        textSpan.classList.remove('hidden');
+    } else {
+        alert('Er ging iets verkeerd. Probeer opnieuw of klaag bij Zishan');
     }
 }

@@ -8,12 +8,6 @@ body {
     text-align: center;
 }
 
-.titlebar {
-    background-color: rgba(255, 255, 255, .5);
-    height: 4em;
-    text-align: center;
-}
-
 #camera {
     width: 0.1px;
     height: 0.1px;
@@ -21,6 +15,23 @@ body {
     overflow: hidden;
     position: absolute;
     z-index: -1;
+}
+
+#frame {
+    width: 100%;
+}
+
+#frame:focus {
+    outline: 0;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.titlebar {
+    background-color: rgba(255, 255, 255, .5);
+    height: 4em;
+    text-align: center;
 }
 
 .frame-wrapper {
@@ -34,10 +45,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#frame {
-    width: 100%;
+    overflow: hidden;
 }
 
 .content-body {
@@ -71,11 +79,10 @@ i.fa {
     background-color: rgba(255, 255, 255, .5);
 }
 
-#camera {
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
+.hidden {
+    visibility: hidden;
+}
+
+.disabled {
+  color: grey;
 }

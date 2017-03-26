@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <head>
     <title>Kelvin &amp; Rianka Lavender wedding</title>
     <link href="https://fonts.googleapis.com/css?family=Clicker+Script" rel="stylesheet">
@@ -6,11 +8,12 @@
 </head>
 
 <body>
-  <span class='titlebar'> - Bruiloft Kelvin &amp; Rianka - <span>
+    <span class='titlebar'> - Bruiloft Kelvin &amp; Rianka - </span>
 
     <div class="content-body">
         <div class="frame-wrapper">
             <img id="frame">
+            <span id="textSpan" class="hidden">Bedankt!</span>
         </div>
         <input type="file" accept="image/*" capture="camera" name="camera" id="camera">
 
@@ -21,11 +24,10 @@
               </div>
             </label>
 
-            <div class="button" id="upload-button">
-                Foto <br> Versturen
+            <div class="button disabled" id="upload-button">
+                <i class="fa fa-cloud-upload" aria-hidden="true"></i>
             </div>
         </div>
-
     </div>
 
     <script src="js/camera.js"></script>
