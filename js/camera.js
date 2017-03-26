@@ -13,7 +13,7 @@ function uploadFoto(e) {
     formData.append('photo', camera.files[0]);
     formData.append('title', 'Untitled');
 
-    client.open('post',' https://zulfiqar.nl/kelvinrianka/postImage.php' , true);
+    client.open('post', 'https://zulfiqar.nl/kelvinrianka/postImage.php', true);
     client.setRequestHeader('Content-Type', 'multipart/form-data');
     client.send(formData);
 }
@@ -24,7 +24,9 @@ function loadFotoToPreview(e) {
 }
 
 function sendSuccessMessage() {
+    frame.src = '';
     if (client.readyState == 4 && client.status == 200) {
         alert(client.statusText);
+        frame.src = '';
     }
 }
