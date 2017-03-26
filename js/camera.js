@@ -18,8 +18,8 @@ var app = function() {
         formData.append('photo', camera.files[0]);
         formData.append('title', photoTitle.value || 'Undefined');
 
-        client.open('post', 'https://zulfiqar.nl/kelvinrianka/postImage.php', true);
-        client.setRequestHeader('Content-Type', 'multipart/form-data');
+        client.open('POST', 'https://zulfiqar.nl/kelvinrianka/postImage.php', true);
+        // client.setRequestHeader('Content-Type', 'multipart/form-data');
         client.send(formData);
     }
 
