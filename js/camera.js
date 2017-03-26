@@ -1,39 +1,44 @@
-var camera = document.getElementById('camera');
-var frame = document.getElementById('frame');
-var textSpan = document.getElementById('textSpan');
-var uploadButton = document.getElementById('upload-button');
-var client = new XMLHttpRequest();
+'use strict';
 
-camera.addEventListener('change', loadFotoToPreview);
-uploadButton.addEventListener('click', uploadFoto);
-client.addEventListener('readystatechange', sendSuccessMessage);
+var app = function() {
+    var camera = document.getElementById('camera');
+    var frame = document.getElementById('frame');
+    var textSpan = document.getElementById('textSpan');
+    var uploadButton = document.getElementById('upload-button');
+    var photoTitle = document.getElementById('photo-title');
+    var client = new XMLHttpRequest();
 
-function uploadFoto(e) {
-    var formData = new FormData();
+    camera.addEventListener('change', loadFotoToPreview);
+    uploadButton.addEventListener('click', uploadFoto);
+    client.addEventListener('readystatechange', sendSuccessMessage);
 
-    formData.append('photo', camera.files[0]);
-    formData.append('title', 'Untitled');
+    function uploadFoto(e) {
+        var formData = new FormData();
 
-    client.open('post', 'https://zulfiqar.nl/kelvinrianka/postImage.php', true);
-    client.setRequestHeader('Content-Type', 'multipart/form-data');
-    client.send(formData);
-}
+        formData.append('photo', camera.files[0]);
+        formData.append('title', photoTitle.value || 'Undefined');
 
-function loadFotoToPreview(e) {
-    var file = e.target.files[0];
-    frame.src = URL.createObjectURL(file);
-    frame.classList.remove('hidden');
-    uploadButton.classList.remove('disabled');
-    textSpan.classList.add('hidden');
-}
-
-function sendSuccessMessage() {
-    if (client.readyState == 4 && client.status == 200) {
-        frame.src = '';
-        frame.classList.add('hidden');
-        uploadButton.classList.add('disabled');
-        textSpan.classList.remove('hidden');
-    } else {
-        alert('Er ging iets verkeerd. Probeer opnieuw of klaag bij Zishan');
+        client.open('post', 'https://zulfiqar.nl/kelvinrianka/postImage.php', true);
+        client.setRequestHeader('Content-Type', 'multipart/form-data');
+        client.send(formData);
     }
-}
+
+    function loadFotoToPreview(e) {
+        var file = e.target.files[0];
+        frame.src = URL.createObjectURL(file);
+        frame.classList.remove('hidden');
+        uploadButton.classList.remove('disabled');
+        textSpan.classList.add('hidden');
+    }
+
+    function sendSuccessMessage() {
+        if (client.readyState == 4 && client.status == 200) {
+            frame.src = '';
+            frame.classList.add('hidden');
+            uploadButton.classList.add('disabled');
+            textSpan.classList.remove('hidden');
+        } else {
+            alert('Er ging iets verkeerd. Probeer opnieuw of klaag bij Zishan');
+        }
+    }
+}();

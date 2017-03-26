@@ -10,6 +10,15 @@ body {
     height: 100%;
 }
 
+input[type=text] {
+  width: 100%;
+  height: 100%;
+  background: none;
+  text-decoration: none;
+  border: 0;
+  font: bold 1em 'Clicker Script', cursive;
+}
+
 #camera {
     width: 0.1px;
     height: 0.1px;
@@ -39,6 +48,10 @@ body {
     align-items: center;
     overflow: hidden;
     justify-content: center;
+}
+
+.frame-wrapper span{
+  margin: 0 .3em;
 }
 
 .buttons {
