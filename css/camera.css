@@ -1,11 +1,17 @@
 body {
     background-image: url("../resources/backdrop.jpg");
-    background-size: auto 100% ;
+    background-size: auto 100%;
     color: #5E5685;
     font-family: 'Clicker Script', cursive;
     font-weight: bold;
     font-size: 4em;
-    text-shadow: 2px 2px grey;
+    text-align: center;
+}
+
+.titlebar {
+    background-color: rgba(255, 255, 255, .5);
+    height: 4em;
+    text-align: center;
 }
 
 #camera {
@@ -16,22 +22,22 @@ body {
     position: absolute;
     z-index: -1;
 }
-.frame-wrapper{
-  margin: 15px auto;
-  padding: 1%;
-  width: 95%;
-  height: 65%;
-  border: 5px solid #5E5685;
-  border-radius: 2em;
-  background-color: rgba(255, 255, 255, .5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.frame-wrapper {
+    margin: 15px auto;
+    padding: 1%;
+    width: 95%;
+    height: 65%;
+    border: 5px solid #5E5685;
+    border-radius: 2em;
+    background-color: rgba(255, 255, 255, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #frame {
-width: 100%;
-
+    width: 100%;
 }
 
 .content-body {
@@ -58,7 +64,7 @@ i.fa {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width:4em;
+    width: 4em;
     height: 4em;
     border-radius: 2em;
     border: 3px solid #5E5685;
