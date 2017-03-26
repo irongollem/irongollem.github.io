@@ -10,10 +10,10 @@ client.addEventListener('readystatechange', sendSuccessMessage);
 function uploadFoto(e) {
     var formData = new FormData();
 
-    formData.append('foto', camera.files[0]);
+    formData.append('photo', camera.files[0]);
     formData.append('title', 'Untitled');
 
-    client.open('post', REPLACE_WITH_URL, true);
+    client.open('post',' https://zulfiqar.nl/kelvinrianka/postImage.php' , true);
     client.setRequestHeader('Content-Type', 'multipart/form-data');
     client.send(formData);
 }
