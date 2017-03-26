@@ -1,5 +1,24 @@
 body {
+    /*background-image: url("../resources/backdrop.jpg");
+    background-size: auto 100% ;*/
+    color: #5E5685;
+    font-family: 'Clicker Script', cursive;
+    font-weight: bold;
+    font-size: 4em;
+    text-shadow: 2px 2px white;
+}
+
+.backdrop {
+    height: 110%;
+    width: 150%;
+    top: -10%;
+    left: -50%:
+    position: absolute;
     background-image: url("../resources/backdrop.jpg");
+    background-size: cover;
+    z-index: 4;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
 }
 
 #camera {
@@ -10,25 +29,30 @@ body {
     position: absolute;
     z-index: -1;
 }
-.frame-wrapper{
-  margin: 15px auto;
-  padding: 1%;
-  width: 90%;
-  height: 80%;
-  border: 5px solid #5E5685;
-  border-radius: 2em;
-  background-color: rgba(255, 255, 255, .5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.frame-wrapper {
+    margin: 15px auto;
+    padding: 1%;
+    width: 95%;
+    height: 75%;
+    border: 5px solid #5E5685;
+    border-radius: 2em;
+    background-color: rgba(255, 255, 255, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #frame {
-width: 100%;
-
+    width: 100%;
 }
 
 .content-body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
     margin: auto;
     text-align: center;
     vertical-align: bottom;
@@ -47,19 +71,15 @@ i.fa {
 }
 
 .button {
-    margin: 0 2px;
-    color: #5E5685;
-    font-family: 'Clicker Script', cursive;
-    font-weight: bold;
-    font-size: 1.3em;
+    margin: 0 .5em;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 5em;
-    height: 5em;
+    width: 4em;
+    height: 4em;
     border-radius: 2em;
-    border: 2px solid #5E5685;
+    border: 3px solid #5E5685;
     background-color: rgba(255, 255, 255, .5);
 }
 
