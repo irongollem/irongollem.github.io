@@ -11,6 +11,8 @@ var app = function() {
     camera.addEventListener('change', loadFotoToPreview);
     uploadButton.addEventListener('click', uploadFoto);
     client.addEventListener('readystatechange', sendSuccessMessage);
+    addToHomescreen();
+
 
     function uploadFoto(e) {
         var formData = new FormData();
@@ -19,7 +21,6 @@ var app = function() {
         formData.append('title', photoTitle.value || 'Undefined');
 
         client.open('POST', 'https://zulfiqar.nl/kelvinrianka/postImage.php', true);
-        // client.setRequestHeader('Content-Type', 'multipart/form-data');
         client.send(formData);
     }
 

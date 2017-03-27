@@ -4,7 +4,21 @@
     <title>Kelvin &amp; Rianka Lavender wedding</title>
     <link href="https://fonts.googleapis.com/css?family=Clicker+Script" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/camera.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/add-to-homescreen/dist/style/addtohomescreen.css">
+
     <script src="https://use.fontawesome.com/4280cbc516.js"></script>
+    <script src="node_modules/add-to-homescreen/dist/addtohomescreen.min.js"></script>
+
+    <!--fullscreen logic-->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- TODO create and rename icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-icon-57x57-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-icon-72x72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-icon-114x114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-icon-144x144-precomposed.png" />
 </head>
 
 <body>
@@ -14,10 +28,10 @@
         <img id="frame">
         <span id="textSpan" class="hidden">Bedankt!</span>
     </div>
-      <div class="frame-wrapper">
+    <div class="frame-wrapper">
         <span>Titel:</span>
         <input type="text" id="photo-title" maxlength="30">
-      </div>
+    </div>
     <input type="file" accept="image/*" capture="camera" name="camera" id="camera">
 
     <div class="buttons">
@@ -32,5 +46,6 @@
         </div>
     </div>
 
+    <script src="node_modules/screenfull/dist/screenfull.js"></script>
     <script src="js/camera.js"></script>
 </body>
