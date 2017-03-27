@@ -13,7 +13,6 @@ var app = function() {
     client.addEventListener('readystatechange', sendSuccessMessage);
     addToHomescreen();
 
-
     function uploadFoto(e) {
         var formData = new FormData();
 
@@ -35,11 +34,11 @@ var app = function() {
     function sendSuccessMessage() {
         if (client.readyState == 4 && client.status == 200) {
             frame.src = '';
+            photoTitle.value = '';
+            camera.value = '';
             frame.classList.add('hidden');
             uploadButton.classList.add('disabled');
             textSpan.classList.remove('hidden');
-        } else {
-            alert('Er ging iets verkeerd. Probeer opnieuw of klaag bij Zishan');
         }
     }
 }();
