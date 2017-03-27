@@ -15,9 +15,7 @@
     "upload",
     "wedding"
   ],
-  "author": "Jeffrey Ernst",
+  "author": ["Jeffrey Ernst", "Zishan"],
   "license": "ISC",
-  "dependencies": {
-    "screenfull": "^3.1.0"
-  }
+  "dependencies": {}
 }
